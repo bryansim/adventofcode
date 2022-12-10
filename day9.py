@@ -35,13 +35,13 @@ def resolve_tail_position(relative_tail_position):
         if (relative_tail_position[0] == -1) or (relative_tail_position[0] == 1): 
             new_tail_position = [relative_tail_position[0]*-1,1]
         if (relative_tail_position[0] == -2) or (relative_tail_position[0] == 2): 
-            new_tail_position =[int(relative_tail_position[1]/2)*-1,1]
+            new_tail_position =[int(relative_tail_position[0]/2)*-1,1]
     if relative_tail_position[1] == 2:
         new_tail_position = [0,-1]
         if (relative_tail_position[0] == -1) or (relative_tail_position[0] == 1): 
             new_tail_position = [relative_tail_position[0]*-1,-1]
         if (relative_tail_position[0] == -2) or (relative_tail_position[0] == 2):
-            new_tail_position = [int(relative_tail_position[1]/2)*-1,-1]
+            new_tail_position = [int(relative_tail_position[0]/2)*-1,-1]
 
     return new_tail_position, [relative_tail_position[0]+new_tail_position[0],relative_tail_position[1]+new_tail_position[1]]
 
